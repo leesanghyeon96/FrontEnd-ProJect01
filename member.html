@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="include.js"></script>
+    <script src="header.js"></script>
+    <link rel="stylesheet" type="text/css" href="p1_show.css">
+    <style>
+        .op{
+            border:1px solid red;
+            width:100%;
+            height:800px;
+        }
+        .mem{
+            width:50%;
+            margin:0 auto;
+            border:1px solid black;
+            height:800px;
+        }
+        h2{
+            text-align: center;
+        }
+        table{
+            border:1px solid red;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div data-include="header.html"></div>
+
+    <div class="op">
+        <div class="mem">
+            <h2>회원가입</h2>
+            <form>
+                <table>
+                    <tr><th>이름</th><td></td></tr> <!--이름-->
+                    <tr><th>아이디</th><td></td></tr> <!--아이디-->
+                    <tr><th>비밀번호</th><td></td></tr> <!--비밀번호-->
+                    <tr><th>비밀번호 확인</th><td></td></tr> <!--비밀번호 확인-->
+                    <tr><th>주소</th><td></td></tr> <!--주소-->
+                    <tr><th>성별</th><td></td></tr> <!--성별-->
+                    <tr><th>나이</th><td></td></tr> <!--나이-->
+                </table>
+            </form>
+        </div>
+    </div>
+
+
+    <div data-include="footer.html"></div>
+    <script>
+        includeHTML();
+    </script>
+</body>
+</html>

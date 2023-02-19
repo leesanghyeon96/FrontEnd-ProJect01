@@ -61,3 +61,41 @@
                 $(".main2_div_e_div_d3").css('border-top','1px solid rgb(185, 183, 183)');
             })
         })
+
+        //백그라운드 이미지 슬라이드
+        /*
+        $(document).ready(function() {
+            var currentImage = 0;
+            var images = $("#slideshow img");
+            var numberOfImages = images.length;
+          
+            function changeImage() {
+              var image = images.eq(currentImage);
+              images.hide();
+              image.show();
+            }
+          
+            changeImage();
+            setInterval(function() {
+              currentImage = (currentImage + 1) % numberOfImages;
+              changeImage();
+            }, 2000);
+          });
+          */
+
+          //백그라운드 이미지
+          $(document).ready(function() {
+            var backimages = [
+              "image1.jpg",
+              "image2.jpg",
+              "image3.jpg",
+            ];
+            var i = 0;
+            
+            function changeBackground() {
+              $("body").css("background-image", "url(" + backimages[i] + ")");
+              i = (i + 1) % backimages.length;
+            }
+            
+            setInterval(changeBackground, 3000);
+          });
