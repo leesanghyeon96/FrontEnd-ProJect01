@@ -62,40 +62,32 @@
             })
         })
 
-        //백그라운드 이미지 슬라이드
-        /*
-        $(document).ready(function() {
-            var currentImage = 0;
-            var images = $("#slideshow img");
-            var numberOfImages = images.length;
-          
-            function changeImage() {
-              var image = images.eq(currentImage);
-              images.hide();
-              image.show();
-            }
-          
-            changeImage();
-            setInterval(function() {
-              currentImage = (currentImage + 1) % numberOfImages;
-              changeImage();
-            }, 2000);
-          });
-          */
 
-          //백그라운드 이미지
-          $(document).ready(function() {
-            var backimages = [
-              "image1.jpg",
-              "image2.jpg",
-              "image3.jpg",
-            ];
-            var i = 0;
-            
-            function changeBackground() {
-              $("body").css("background-image", "url(" + backimages[i] + ")");
-              i = (i + 1) % backimages.length;
-            }
-            
-            setInterval(changeBackground, 3000);
-          });
+
+
+
+
+
+
+          // 이미지 URL 배열 생성
+const images = ["/img_header_background/screenpage1.png", "/img_header_background/screenpage2.png", "/img_header_background/screenpage3.png"];
+
+// 이미지를 변경하는 함수
+function changeImage() {
+  const slideshowImage = document.querySelector(".slideshow-image");
+  const currentImage = slideshowImage.style.backgroundImage;
+  const currentIndex = images.indexOf(currentImage.slice(5, -2));
+
+  // 다음 이미지의 인덱스 계산
+  let nextIndex = currentIndex + 1;
+  if (nextIndex >= images.length) {
+    nextIndex = 0;
+  }
+
+  // 다음 이미지 설정
+  slideshowImage.style.backgroundImage = `url('${images[nextIndex]}')`;
+}
+
+// 5초마다 이미지 변경
+setInterval(changeImage, 5000);
+

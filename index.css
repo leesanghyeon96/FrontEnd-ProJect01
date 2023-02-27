@@ -7,15 +7,76 @@
     width:100%;
     color:white;
     z-index:3;
+    position:relative;
+    overflow: hidden;
+
     background-image:url("img_header_background/screenpage2.png");   /* header의 뒤로 이미지 삽입. */
     background-size: 1535px 800px;
-    width:100%;
     height:800px;
 }
+.slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+
+  /*
+  .slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background-size: cover;
+    animation: slide 10s infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+      background-image: url("img_header_background/screenpage1.png");
+    }
+    25% {
+      background-image: url("img_header_background/screenpage2.png");
+    }
+    50% {
+      background-image: url("img_header_background/screenpage3.png");
+    }
+    75% {
+      background-image: url("img_header_background/screenpage1.png");
+    }
+    100% {
+      background-image: url("img_header_background/screenpage2.png");
+    }
+  }
+  
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header_div1{
     width:100%;
     height:40px;
-    z-index:3;
+    z-index:8;
 }
 .header_div1_div{
     height:40px;
@@ -215,13 +276,16 @@
         rgba(255, 255, 255, 0.5),
         rgba(255, 255, 255, 0.5)
     ), url(img/ol.jpg);
+    width:100%;
 }
 
-
+.main1_div_pd_dis1_div2 img{
+    width:40%;
+}
 .main1_div_pd_dis1_div1{
     float:left;
     padding-top: 20px;
-    width:150px;
+    width:25%;
     text-align: center;
 }
 .main1_div_pd_dis1_div1 a{
@@ -232,7 +296,7 @@
 }
 
 .main1_div_pd_dis1_div2_text{
-    width:270px;
+    width:15%;
     font-size: 16px;
     height:180px;
     position: absolute;
@@ -248,11 +312,13 @@
         rgba(255, 255, 255, 0.5)
     ), url(img/oll.jpg);
 }
-
+.main1_div_pd_dis2_div2 img{
+    width:40%;
+}
 .main1_div_pd_dis2_div1{
     float:left;
     padding-top: 20px;
-    width:150px;
+    width:25%;
     text-align: center; 
 }
 .main1_div_pd_dis2_div1 a{
@@ -262,7 +328,7 @@
     font-size: 10px;
 }
 .main1div_pd_dis2_div2_text{
-    width:270px;
+    width:15%;
     font-size: 16px;
     height:180px;
     position: absolute;
@@ -281,8 +347,11 @@
 .main1_div_pd_dis3_div1{
     float:left;
     padding-top: 20px;
-    width:150px;
+    width:25%;
     text-align: center; 
+}
+.main1_div_pd_dis3_div2 img{
+    width:40%;
 }
 .main1_div_pd_dis3_div1 a{
     text-decoration: none;
@@ -291,7 +360,7 @@
     font-size: 10px;
 }
 .main1div_pd_dis3_div2_text{
-    width:270px;
+    width:15%;
     font-size: 16px;
     height:180px;
     position: absolute;
@@ -300,7 +369,7 @@
 
 .main1_div_sd{
     width:50%;
-    float:right;
+    float:left;
     height:800px;
     border:1px solid black;
 }
@@ -337,11 +406,12 @@
 .main1_div_sd_dis1_img_img,.main1_div_sd_dis2_img_img{
     position: absolute;
     margin:10px 0 10px 40px;
+    width:20%;
 }
 .main1_div_sd_dis2{
     height:700px;
     width:50%;
-    margin-left: 378px;
+    float:right;
 }
 .main1_div_sd_dis1_text,.main1_div_sd_dis2_text{
     font-size: 20px;
@@ -368,7 +438,7 @@
     padding:40px 0 0 50px;
 }
 .table{
-    width:700px;
+    width:90%;
     font-size:18px;
     margin:30px 0 0 30px;
     border-collapse: collapse;
@@ -390,7 +460,7 @@
     text-align: center;
     background-color: brown;
     padding-top: 5px;
-    margin:20px 0 0 550px;
+    margin:20px 0 0 50px;
 }
 .main2_div_news_div_div a{
     text-decoration: none;
@@ -439,7 +509,7 @@
     text-decoration-line: none;
 }
 .main2_div_e_div_d1_box1 img, .main2_div_e_div_d1_box3 img, .main2_div_e_div_d1_box4 img, .main2_div_e_div_d1_box2 img{
-    width:150px;
+    width:90%;
     height:80px;
     position:relative;
     top:20px;

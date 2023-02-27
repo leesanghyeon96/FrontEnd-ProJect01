@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+.slideshow {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+    </style>
+    <script>
+
+// 이미지 URL 배열 생성
+const images = ["/img_header_background/screenpage1.png", "/img_header_background/screenpage2.png", "/img_header_background/screenpage3.png"];
+
+// 이미지를 변경하는 함수
+function changeImage() {
+  const slideshowImage = document.querySelector(".slideshow-image");
+  const currentImage = slideshowImage.style.backgroundImage;
+  const currentIndex = images.indexOf(currentImage.slice(5, -2));
+
+  // 다음 이미지의 인덱스 계산
+  let nextIndex = currentIndex + 1;
+  if (nextIndex >= images.length) {
+    nextIndex = 0;
+  }
+
+  // 다음 이미지 설정
+  slideshowImage.style.backgroundImage = `url('${images[nextIndex]}')`;
+}
+
+// 5초마다 이미지 변경
+setInterval(changeImage, 5000);
+
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+
+
+    <div class="slideshow">
+        <div class="slideshow-image"></div>
+      </div>
+
+
+
+
+
+</html>
